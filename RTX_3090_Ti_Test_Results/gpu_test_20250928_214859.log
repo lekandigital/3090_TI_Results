@@ -1,0 +1,107 @@
+=== RTX 3090 Ti Validation Test ===
+Started: Sun Sep 28 09:48:59 PM EDT 2025
+
+=== Test 2/4: Basic GPU Compute Test ===
+Testing basic GPU compute and memory operations...
+Current time: Sun Sep 28 21:49:18 2025
+PyTorch not available, using alternative method
+Test 2 completed
+
+=== Test 3/4: GPU-Burn Stress Test (30 minutes) ===
+Starting intensive GPU burn-in test...
+GPU 0: NVIDIA GeForce RTX 3090 Ti (UUID: GPU-1b5e0eff-e241-ab37-aa4b-300ce578e103)
+Using compare file: compare.ptx
+Burning for 1800 seconds.
+0.2%  proc'd: 80 (21745 Gflop/s)   errors: 0   temps: 46 C 0.3%  proc'd: 80 (21745 Gflop/s)   errors: 0   temps: 46 C 0.3%  proc'd: 80 (21745 Gflop/s)   errors: 0   temps: 46 C 0.3%  proc'd: 80 (21745 Gflop/s)   errors: 0   temps: 46 C 0.3%  proc'd: 80 (21745 Gflop/s)   errors: 0   temps: 46 C 0.3%  proc'd: 80 (21745 Gflop/s)   errors: 0   temps: 46 C 0.3%  proc'd: 80 (21745 Gflop/s)   errors: 0   temps: 46 C 0.3%  proc'd: 80 (21745 Gflop/s)   errors: 0   temps: 46 C 0.3%  proc'd: 80 (21745 Gflop/s)   errors: 0   temps: 46 C 0.3%  proc'd: 80 (21745 Gflop/s)   errors: 0   temps: 46 C 0.3%  proc'd: 80 (21745 Gflop/s)   errors: 0   temps: 46 C 0.3%  proc'd: 80 (21745 Gflop/s)   errors: 0   temps: 63 C 0.3%  proc'd: 80 (21745 Gflop/s)   errors: 0   temps: 63 C 0.3%  proc'd: 80 (21745 Gflop/s)   errors: 0   temps: 63 C 0.3%  proc'd: 80 (21745 Gflop/s)   errors: 0   temps: 63 C 0.3%  proc'd: 80 (21745 Gflop/s)   errors: 0   temps: 63 C 0.3%  proc'd: 80 (21745 Gflop/s)   errors: 0   temps: 63 C 0.3%  proc'd: 80 (21745 Gflop/s)   errors: 0   temps: 63 C 0.3%  proc'd: 80 (21745 Gflop/s)   errors: 0   temps: 63 C 0.3%  proc'd: 80 (21745 Gflop/s)   errors: 0   temps: 63 C 0.4%  proc'd: 160 (28994 Gflop/s)   errors: 0   temps: 63 C Restarting GPU burn test for full 30 minutes...
+
+=== GPU Status During Full Burn Test ===
+=== GPU Memory Pattern Test ===
+Started: Sun Sep 28 21:50:59 2025
+
+--- Test 1: GPU Memory Info ---
+Memory status:
+memory.total [MiB], memory.used [MiB], memory.free [MiB]
+24564 MiB, 21597 MiB, 2516 MiB
+
+
+--- Test 2: GPU Persistence Test ---
+  Persistence test iteration 1/5
+    ✓ Memory structures intact
+  Persistence test iteration 2/5
+    ✓ Memory structures intact
+  Persistence test iteration 3/5
+    ✓ Memory structures intact
+  Persistence test iteration 4/5
+    ✓ Memory structures intact
+  Persistence test iteration 5/5
+    ✓ Memory structures intact
+
+--- Test 3: Thermal Stability Test ---
+  Temperature reading 1/10: 74°C
+  Temperature reading 2/10: 75°C
+  Temperature reading 3/10: 76°C
+  Temperature reading 4/10: 76°C
+  Temperature reading 5/10: 76°C
+  Temperature reading 6/10: 77°C
+  Temperature reading 7/10: 77°C
+  Temperature reading 8/10: 78°C
+  Temperature reading 9/10: 78°C
+  Temperature reading 10/10: 79°C
+
+  Temperature Statistics:
+    Average: 76.6°C
+    Maximum: 79°C
+    Minimum: 74°C
+    Range: 5°C
+  ✓ Good thermal performance
+
+Completed: Sun Sep 28 21:51:39 2025
+=== GPU Memory Pattern Test ===
+Started: Sun Sep 28 21:51:52 2025
+
+--- Test 1: GPU Memory Info ---
+Memory status:
+memory.total [MiB], memory.used [MiB], memory.free [MiB]
+24564 MiB, 21597 MiB, 2516 MiB
+
+
+--- Test 2: GPU Persistence Test ---
+  Persistence test iteration 1/5
+    ✓ Memory structures intact
+  Persistence test iteration 2/5
+    ✓ Memory structures intact
+  Persistence test iteration 3/5
+    ✓ Memory structures intact
+  Persistence test iteration 4/5
+    ✓ Memory structures intact
+  Persistence test iteration 5/5
+    ✓ Memory structures intact
+
+--- Test 3: Thermal Stability Test ---
+  Temperature reading 1/10: 81°C
+  Temperature reading 2/10: 81°C
+  Temperature reading 3/10: 81°C
+  Temperature reading 4/10: 82°C
+  Temperature reading 5/10: 82°C
+  Temperature reading 6/10: 82°C
+  Temperature reading 7/10: 82°C
+  Temperature reading 8/10: 82°C
+  Temperature reading 9/10: 83°C
+  Temperature reading 10/10: 83°C
+
+  Temperature Statistics:
+    Average: 81.9°C
+    Maximum: 83°C
+    Minimum: 81°C
+    Range: 2°C
+  ✓ Good thermal performance
+
+Completed: Sun Sep 28 21:52:32 2025
+
+=== Test 4/4: PCIe Performance Test ===
+PCIe Info during stress test:
+Field "pci.link.gen.current" is not a valid field to query.
+
+PCIe and Performance Info:
+pci.bus_id, pci.device_id, pci.sub_device_id
+00000000:0F:00.0, 0x220310DE, 0x49833842
